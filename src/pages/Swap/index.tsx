@@ -63,6 +63,7 @@ import { computeFiatValuePriceImpact } from '../../utils/computeFiatValuePriceIm
 import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import { computeRealizedPriceImpact, warningSeverity } from '../../utils/prices'
 import { supportedChainId } from '../../utils/supportedChainId'
+import { SwapWidget } from '@uniswap/widgets'
 
 const ArrowContainer = styled.div`
   display: inline-block;
@@ -511,6 +512,7 @@ export default function Swap() {
           showCancel={true}
         />
         <PageWrapper>
+          <SwapWidget />
           <SwapWrapper id="swap-page">
             <SwapHeader allowedSlippage={allowedSlippage} />
             <ConfirmSwapModal
